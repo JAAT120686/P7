@@ -5,6 +5,10 @@ import streamlit as st
 car_data = pd.read_csv('vehicles_us.csv')  # leer los datos
 hist_button = st.button('Construir histograma')  # crear un botón
 
+print("Análisis de Vehículos Usados")
+print("Esta aplicación permite explorar datos de anuncios de venta de coches mediante gráficos interactivos.")
+
+
 if hist_button:  # al hacer clic en el botón
     # escribir un mensaje
     st.write(
@@ -18,8 +22,7 @@ if hist_button:  # al hacer clic en el botón
 
 if st.button('Construir gráfico de dispersión'):  # al hacer clic en el botón
     # escribir un mensaje
-    st.write(
-        'Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
+    st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
 
     # crear un gráfico de dispersión
     fig = px.scatter(car_data, x="price", y="odometer")
